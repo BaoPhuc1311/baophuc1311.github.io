@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog chia sẻ báo cáo code và dự án lập trình">
+    <meta name="keywords" content="code, python, lập trình, báo cáo">
+    <meta name="author" content="Tên Người Dùng">
+    <title>Blog Code của Tôi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        /* Tùy chỉnh thêm */
+        .post-card {
+            transition: transform 0.2s;
+        }
+
+        .post-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 sticky top-0 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/40" alt="Logo" class="mr-2 rounded-full">
+                <h1 class="text-2xl font-bold">Blog Code của Tôi</h1>
+            </div>
+            <nav class="space-x-4">
+                <a href="index.html" class="hover:underline">Trang chủ</a>
+                <a href="post1.html" class="hover:underline">Báo Cáo Python</a>
+                <a href="post2.html" class="hover:underline">Hệ Thống Gợi Ý</a>
+                <a href="about.html" class="hover:underline">Giới thiệu</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-800 text-white py-16">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Chào mừng đến với Blog Code!</h2>
+            <p class="text-lg mb-6">Nơi chia sẻ báo cáo code, dự án Python, và kinh nghiệm lập trình.</p>
+            <a href="#posts" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Xem bài viết</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto py-8 flex flex-col md:flex-row gap-8">
+        <!-- Posts Section -->
+        <main id="posts" class="md:w-3/4">
+            <h2 class="text-2xl font-semibold mb-6">Bài viết mới nhất</h2>
+            <!-- Post Card 1 -->
+            <article class="post-card bg-white p-6 mb-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2"><a href="post1.html" class="hover:underline">Báo Cáo: Fibonacci</a>
+                </h3>
+                <p class="text-gray-600 mb-4">Tìm hiểu cách tính số Fibonacci bằng Python với hàm đệ quy.</p>
+                <pre class="bg-gray-800 text-white p-4 rounded"><code class="language-python">
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(10))
+                </code></pre>
+                <div class="mt-4">
+                    <span class="text-sm text-gray-500">17/04/2025</span>
+                    <span class="ml-4 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                    <span class="ml-2 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Báo cáo</span>
+                </div>
+            </article>
+            <!-- Post Card 2 -->
+            <article class="post-card bg-white p-6 mb-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2"><a href="post2.html" class="hover:underline">Hệ Thống Gợi Ý</a></h3>
+                <p class="text-gray-600 mb-4">Giới thiệu hệ thống gợi ý đơn giản dùng cosine similarity.</p>
+                <pre class="bg-gray-800 text-white p-4 rounded"><code class="language-python">
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+def recommend(user_id, data):
+    similarity = cosine_similarity(data)
+    return similarity[user_id]
+                </code></pre>
+                <div class="mt-4">
+                    <span class="text-sm text-gray-500">18/04/2025</span>
+                    <span class="ml-4 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                    <span class="ml-2 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Machine Learning</span>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="md:w-1/4">
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-lg font-semibold mb-4">Tìm kiếm</h3>
+                <input type="text" placeholder="Tìm bài viết..." class="w-full p-2 border rounded">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h3 class="text-lg font-semibold mb-4">Danh mục</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-blue-600 hover:underline">Code</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">Python</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">Machine Learning</a></li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-4">Tag phổ biến</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Python</span>
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Báo cáo</span>
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Machine Learning</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="mb-4">&copy; 2025 Blog Code của Tôi. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/tên-người-dùng" class="hover:text-blue-400">GitHub</a>
+                <a href="mailto:your-email@example.com" class="hover:text-blue-400">Email</a>
+                <a href="https://x.com/your-profile" class="hover:text-blue-400">X</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
